@@ -14,7 +14,7 @@ This Python script allows for efficient merging of streaming video files (`.ts` 
 
 To use the script, provide the arguments as follows:
 
-`python <script_name.py> -i <input_dir> -o <output_file> -r <range> -t <temp_dir>`
+`python mergets.py -i <input_dir> -o <output_file> -r <range> -t <temp_dir>`
 
 Where: 
 
@@ -22,13 +22,13 @@ Where:
 
 - `<output_file>`: Output file path. Default is `output.ts`.
 
-- `<range>`: Range of `.ts` files to consider for merging, given as "start-end". This parameter is optional.
+- `<range>`: Range of `.ts` files to consider for merging, given as "start-end". This parameter is optional. If range is not specified, all valid .ts files in the input directory will be merged.
 
-- `<temp_dir>`: Temporary directory for storing intermediate files. This parameter is optional.
+- `<temp_dir>`: Temporary directory for storing intermediate files. This parameter is optional. If a temp directory is not specified, the default temp location for your OS will be used.
 
 Example:
 
-`python <script_name.py> -i ./streams -o ./merged/output.ts -r 1-10 -t ./temp`
+`python mergets.py -i ./streams -o ./merged/output.ts -r 1-10 -t ./temp`
 
 In this example, the script will merge the stream files indexed from 1 to 10 in the `./streams` directory and generate an output file `output.ts` in the `./merged` directory. Intermediate files during the process will be stored in `./temp` directory.
 
